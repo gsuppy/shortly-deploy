@@ -6,7 +6,7 @@
   });
 </script>
 
-<% if(production) {%>
+<% if(process.env.NODE_ENV === 'production') {%>
 <script src='/dist/uglify_min.js'></script>
 <% } else { %>
 <script src='/client/app.js'></script>
