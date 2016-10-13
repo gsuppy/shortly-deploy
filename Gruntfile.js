@@ -100,7 +100,7 @@ module.exports = function(grunt) {
     if (grunt.option('prod')) {
       grunt.task.run(['eslint', 'test', 'shell']);
     } else {
-      grunt.task.run(['server-dev', 'watch']);
+      grunt.task.run(['server-dev']);
     }
   });
 
