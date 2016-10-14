@@ -16,7 +16,7 @@ var urlSchema = new Schema({
 var Link = mongoose.model('Link', urlSchema);
 
 urlSchema.pre('save', function(next) {
-  this.visits = 0;
+  // this.visits = 0;
   var shasum = crypto.createHash('sha1');
   shasum.update(this.url);
   this.code = shasum.digest('hex').slice(0, 5);
