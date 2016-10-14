@@ -24,7 +24,7 @@ userSchema.pre('save', function(next) {
     .then(function(hash) {
       this.password = hash;
       next();
-  });
+    });
 });
 
   // var User = db.Model.extend({
@@ -47,4 +47,4 @@ userSchema.pre('save', function(next) {
   // }
   // });
 
-  module.exports = User;
+module.exports = User;
